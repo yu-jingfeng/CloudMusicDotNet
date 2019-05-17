@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CloudMusicDotNet.Commons.MusicServices
+namespace CloudMusicDotNet.Commons.Interfaces
 {
     public interface IAlbumService
     {

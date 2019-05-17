@@ -1,5 +1,6 @@
 ﻿using CloudMusicDotNet.Api.Dto;
 using CloudMusicDotNet.Api.Infrastructure;
+using CloudMusicDotNet.Commons.Interfaces;
 using CloudMusicDotNet.Commons.MusicServices;
 using Microsoft.AspNetCore.Mvc;
 using System;

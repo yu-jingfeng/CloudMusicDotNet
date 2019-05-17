@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -37,7 +38,7 @@ namespace CloudMusicDotNet.Api.Infrastructure
             // 设置响应cookie
             if (response.Headers.TryGetValues("Set-Cookie", out var resCookies))
             {
-                _httpContext.Response.Headers["Set-Cookie"] = new StringValues(resCookies.ToArray());
+                _httpContext.Response.Headers["Set-Cookie"] = new StringValues(resCookies.Select(c => Regex.Replace(c, @"\s*Domain=[^(;|$)]+;*", "")).ToArray());
             }
 
             return response;

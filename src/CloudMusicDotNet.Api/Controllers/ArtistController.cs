@@ -1,5 +1,6 @@
 ﻿using CloudMusicDotNet.Api.Dto;
 using CloudMusicDotNet.Api.Infrastructure;
+using CloudMusicDotNet.Commons.Interfaces;
 using CloudMusicDotNet.Commons.MusicServices;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -39,7 +40,7 @@ namespace CloudMusicDotNet.Api.Controllers
         }
 
         /// <summary>
-        /// 歌手介绍
+        /// 歌手介绍描述
         /// </summary>
         /// <param name="id">歌手id</param>
         /// <returns></returns>
@@ -92,6 +93,34 @@ namespace CloudMusicDotNet.Api.Controllers
             var param = new { ArtistId = dto.ArtistId, ArtistIds = $"[{dto.ArtistId}]" };
             var data = _dtoParseService.Parse(param);
             var result = await _artistService.Sub(data, dto.T);
+
+            return Content(result, "application/json");
+        }
+
+        /// <summary>
+        /// 关注歌手列表
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpGet("SubList")]
+        public async Task<IActionResult> SubList([FromQuery]SimpleDto dto)
+        {
+            var data = _dtoParseService.Parse(dto);
+            var result = await _artistService.SubList(data);
+
+            return Content(result, "application/json");
+        }
+
+        /// <summary>
+        /// 歌手单曲(可获得歌手部分信息和热门歌曲)
+        /// </summary>
+        /// <param name="id">歌手id</param>
+        /// <returns></returns>
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Song(string id)
+        {
+            var data = _dtoParseService.Parse(null);
+            var result = await _artistService.Song(data, id);
 
             return Content(result, "application/json");
         }

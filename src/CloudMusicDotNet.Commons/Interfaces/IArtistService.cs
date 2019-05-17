@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CloudMusicDotNet.Commons.MusicServices
+namespace CloudMusicDotNet.Commons.Interfaces
 {
     /// <summary>
     /// 歌手服务

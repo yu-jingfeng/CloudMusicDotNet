@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +23,18 @@ namespace CloudMusicDotNet.Api.Infrastructure
             JObject json;
 
             if (dto == null)
+            {
                 json = new JObject();
+            } 
             else
-                json = JObject.FromObject(dto);
-
+            {
+                var setting = new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                };
+                json = JObject.FromObject(dto, JsonSerializer.Create(setting));
+            }
+                
             var csrfToken = _httpContext.Request.Cookies["_csrf"];
 
             if (!string.IsNullOrWhiteSpace(csrfToken))

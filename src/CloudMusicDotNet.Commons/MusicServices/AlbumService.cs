@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloudMusicDotNet.Commons.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;

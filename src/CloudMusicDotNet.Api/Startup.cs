@@ -8,6 +8,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using CloudMusicDotNet.Api.Infrastructure;
 using CloudMusicDotNet.Commons;
+using CloudMusicDotNet.Commons.Interfaces;
 using CloudMusicDotNet.Commons.MusicServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
