@@ -34,5 +34,45 @@
   "ArtistSong": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/artist/"
+  },
+  "MusicComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/R_SO_4_"
+  },
+  "AlbumComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/R_AL_3_"
+  },
+  "PlaylistComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/A_PL_0_"
+  },
+  "MvComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/R_MV_5_"
+  },
+  "DjComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/A_DJ_1_"
+  },
+  "VideoComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/R_VI_62_"
+  },
+  "HotComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/hotcomments/"
+  },
+  "LikeComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/comment/"
+  },
+  "EventComment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/resource/comments/"
+  },
+  "Comment": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/resource/comments/"
   }
 }

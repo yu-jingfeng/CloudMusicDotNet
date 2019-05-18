@@ -63,11 +63,11 @@ namespace CloudMusicDotNet.Commons.MusicServices
         /// 收藏与取消收藏歌手
         /// </summary>
         /// <param name="data"></param>
-        /// <param name="queryString">操作: sub/unsub</param>
+        /// <param name="t">操作: 1 收藏 ,0 取消收藏</param>
         /// <returns></returns>
-        public Task<string> Sub(string data, string queryString)
+        public Task<string> Sub(string data, int t)
         {
-            return _requestService.Request("ArtistSub", data, queryString);
+            return _requestService.Request("ArtistSub", data, (t == 1 ? "sub" : "unsub"));
         }
 
         /// <summary>

@@ -15,6 +15,6 @@ namespace CloudMusicDotNet.Api.Dto
         /// <summary>
         /// 操作, sub/unsub
         /// </summary>
-        public string T { get; set; }
+        public int T { get; set; }
     }
 }

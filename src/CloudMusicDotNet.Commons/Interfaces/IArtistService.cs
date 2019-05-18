@@ -43,9 +43,9 @@ namespace CloudMusicDotNet.Commons.Interfaces
         /// 收藏与取消收藏歌手
         /// </summary>
         /// <param name="data"></param>
-        /// <param name="queryString">操作: sub/unsub</param>
+        /// <param name="t">操作: 1 收藏 ,0 取消收藏</param>
         /// <returns></returns>
-        Task<string> Sub(string data, string queryString);
+        Task<string> Sub(string data, int t);
 
         /// <summary>
         /// 关注歌手列表

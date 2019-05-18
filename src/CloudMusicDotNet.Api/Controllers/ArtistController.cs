@@ -85,14 +85,15 @@ namespace CloudMusicDotNet.Api.Controllers
         /// <summary>
         /// 收藏与取消收藏歌手
         /// </summary>
-        /// <param name="dto"></param>
+        /// <param name="id">歌手id</param>
+        /// <param name="t">操作: 1 收藏 ,0 取消收藏</param>
         /// <returns></returns>
         [HttpGet("Sub")]
-        public async Task<IActionResult> Sub([FromQuery]ArtistSubDto dto)
+        public async Task<IActionResult> Sub(string id, int t)
         {
-            var param = new { ArtistId = dto.ArtistId, ArtistIds = $"[{dto.ArtistId}]" };
+            var param = new { ArtistId = id, ArtistIds = $"[{id}]" };
             var data = _dtoParseService.Parse(param);
-            var result = await _artistService.Sub(data, dto.T);
+            var result = await _artistService.Sub(data, t);
 
             return Content(result, "application/json");
         }
