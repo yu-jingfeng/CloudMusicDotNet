@@ -91,7 +91,10 @@ namespace CloudMusicDotNet.Api.Controllers
             return Content(result, "application/json");
         }
 
-
+        /// <summary>
+        /// 热门电台(待完善)
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("Hot")]
         public async Task<IActionResult> Hot()
         {

@@ -10,7 +10,7 @@ namespace CloudMusicDotNet.Api.Dto
         /// <summary>
         /// 数据条数
         /// </summary>
-        public int Limit { get; set; }
+        public int Limit { get; set; } = 30;
 
         /// <summary>
         /// 偏移数量
@@ -20,6 +20,6 @@ namespace CloudMusicDotNet.Api.Dto
         /// <summary>
         /// 总条数
         /// </summary>
-        public bool Total { get; set; }
+        public bool Total { get; set; } = true;
     }
 }
