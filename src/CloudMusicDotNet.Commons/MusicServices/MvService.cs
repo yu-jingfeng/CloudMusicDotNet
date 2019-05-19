@@ -7,66 +7,66 @@ using System.Threading.Tasks;
 namespace CloudMusicDotNet.Commons.MusicServices
 {
     /// <summary>
-    /// 消息通知服务
+    /// MV服务
     /// </summary>
-    public class MsgService : IMsgService
+    public class MvService : IMvService
     {
         private readonly IRequestService _requestService;
 
-        public MsgService(IRequestService requestService)
+        public MvService(IRequestService requestService)
         {
             _requestService = requestService;
         }
 
         /// <summary>
-        /// 评论消息
+        /// MV详情
         /// </summary>
         /// <param name="data"></param>
-        /// <param name="userId">用户id</param>
         /// <returns></returns>
-        public Task<string> Comments(string data, string userId)
+        public Task<string> Detail(string data)
         {
-            return _requestService.Request("CommentsMsg", data, userId);
+            return _requestService.Request("MvDetail", data);
         }
 
         /// <summary>
-        /// @我
+        /// 最新MV
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public Task<string> Forwards(string data)
+        public Task<string> First(string data)
         {
-            return _requestService.Request("ForwardsMsg", data);
+            return _requestService.Request("MvFirst", data);
         }
 
         /// <summary>
-        /// 通知消息
+        /// 收藏与取消收藏MV
         /// </summary>
         /// <param name="data"></param>
+        /// <param name="t">操作 1 收藏, 0 取消收藏</param>
         /// <returns></returns>
-        public Task<string> Notices(string data)
+        public Task<string> Sub(string data, int t)
         {
-            return _requestService.Request("NoticesMsg", data);
+            return _requestService.Request("MvSub", data, (t == 1 ? "sub" : "unsub"));
         }
 
         /// <summary>
-        /// 私信消息
+        /// 已收藏MV列表
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public Task<string> Private(string data)
+        public Task<string> Sublist(string data)
         {
-            return _requestService.Request("PrivateMsg", data);
+            return _requestService.Request("MvSublist", data);
         }
 
         /// <summary>
-        /// 私信内容(登陆后调用此接口 , 可获取私信内容)
+        /// MV链接
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        public Task<string> PrivateHistory(string data)
+        public Task<string> Url(string data)
         {
-            return _requestService.Request("PrivateHistoryMsg", data);
+            return _requestService.Request("MvUrl", data);
         }
     }
 }

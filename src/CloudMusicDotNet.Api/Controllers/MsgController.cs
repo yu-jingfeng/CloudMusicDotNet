@@ -82,5 +82,22 @@ namespace CloudMusicDotNet.Api.Controllers
 
             return Content(result, "application/json");
         }
+
+        /// <summary>
+        /// 私信内容(登陆后调用此接口 , 可获取私信内容)
+        /// </summary>
+        /// <param name="uid">用户id</param>
+        /// <param name="limit">数据条数</param>
+        /// <param name="offset">偏移数量</param>
+        /// <returns></returns>
+        [HttpGet("Private/History")]
+        public async Task<IActionResult> PrivateHistory(string uid, int limit = 20, int offset = 0)
+        {
+            var param = new { userId = uid, limit, offset, total = "true" };
+            var data = _dtoParseService.Parse(param);
+            var result = await _msgService.PrivateHistory(data);
+
+            return Content(result, "application/json");
+        }
     }
 }

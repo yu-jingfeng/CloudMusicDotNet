@@ -6,45 +6,44 @@ using System.Threading.Tasks;
 namespace CloudMusicDotNet.Commons.Interfaces
 {
     /// <summary>
-    /// 消息通知服务
+    /// MV服务
     /// </summary>
-    public interface IMsgService
+    public interface IMvService
     {
         /// <summary>
-        /// 评论消息
+        /// MV详情
         /// </summary>
         /// <param name="data"></param>
-        /// <param name="userId">用户id</param>
         /// <returns></returns>
-        Task<string> Comments(string data, string userId);
+        Task<string> Detail(string data);
 
         /// <summary>
-        /// @我
+        /// 最新MV
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        Task<string> Forwards(string data);
+        Task<string> First(string data);
 
         /// <summary>
-        /// 通知消息
+        /// 收藏与取消收藏MV
         /// </summary>
         /// <param name="data"></param>
+        /// <param name="t">操作 1 收藏, 0 取消收藏</param>
         /// <returns></returns>
-        Task<string> Notices(string data);
+        Task<string> Sub(string data, int t);
 
         /// <summary>
-        /// 私信消息
+        /// 已收藏MV列表
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        Task<string> Private(string data);
+        Task<string> Sublist(string data);
 
         /// <summary>
-        /// 私信内容(登陆后调用此接口 , 可获取私信内容)
+        /// MV链接
         /// </summary>
         /// <param name="data"></param>
         /// <returns></returns>
-        Task<string> PrivateHistory(string data);
-
+        Task<string> Url(string data);
     }
 }

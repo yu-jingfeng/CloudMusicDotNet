@@ -130,5 +130,45 @@
   "DjTodayPerfered": {
     "Crypto": "weapi",
     "Url": "http://music.163.com/weapi/djradio/home/today/perfered"
+  },
+  "CommentsMsg": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/api/v1/user/comments/"
+  },
+  "ForwardsMsg": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/api/forwards/get"
+  },
+  "NoticesMsg": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/api/msg/notices"
+  },
+  "PrivateMsg": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/api/msg/private/users"
+  },
+  "PrivateHistoryMsg": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/api/msg/private/history"
+  },
+  "MvDetail": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/mv/detail"
+  },
+  "MvFirst": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/mv/first"
+  },
+  "MvSub": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/mv/"
+  },
+  "MvSublist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/cloudvideo/allvideo/sublist"
+  },
+  "MvUrl": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/song/enhance/play/mv/url"
   }
 }
