@@ -74,5 +74,61 @@
   "Comment": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/resource/comments/"
+  },
+  "DjBanner": {
+    "Crypto": "weapi",
+    "Url": "http://music.163.com/weapi/djradio/banner/get"
+  },
+  "DjExcludeHot": {
+    "Crypto": "weapi",
+    "Url": "http://music.163.com/weapi/djradio/category/excludehot"
+  },
+  "DjRecommendCategory": {
+    "Crypto": "weapi",
+    "Url": "http://music.163.com/weapi/djradio/home/category/recommend"
+  },
+  "DjCategory": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/category/get"
+  },
+  "DjDetail": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/get"
+  },
+  "DjHot": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/hot/v1"
+  },
+  "DjPaygift": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/home/paygift/list?_nmclfl=1"
+  },
+  "DjProgram": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/dj/program/byradio"
+  },
+  "DjProgramDetail": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/dj/program/detail"
+  },
+  "DjRecommend": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/recommend/v1"
+  },
+  "DjTypeRecommend": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/recommend"
+  },
+  "DjSub": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/"
+  },
+  "DjSublist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/djradio/get/subed"
+  },
+  "DjTodayPerfered": {
+    "Crypto": "weapi",
+    "Url": "http://music.163.com/weapi/djradio/home/today/perfered"
   }
 }
