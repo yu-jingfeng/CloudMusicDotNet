@@ -170,5 +170,33 @@
   "MvUrl": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/song/enhance/play/mv/url"
+  },
+  "EventDel": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/eapi/event/delete"
+  },
+  "EventForward": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/event/forward"
+  },
+  "PersonalizedDj": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/personalized/djprogram"
+  },
+  "PersonalizedMv": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/personalized/mv"
+  },
+  "PersonalizedNewSong": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/personalized/newsong"
+  },
+  "PrivateContent": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/personalized/privatecontent"
+  },
+  "PersonalizedPlayList": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/personalized/playlist"
   }
 }
