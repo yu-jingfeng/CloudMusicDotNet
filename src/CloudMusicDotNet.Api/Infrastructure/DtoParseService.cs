@@ -25,7 +25,11 @@ namespace CloudMusicDotNet.Api.Infrastructure
             if (dto == null)
             {
                 json = new JObject();
-            } 
+            }
+            else if (dto is JObject)
+            {
+                json = dto as JObject;
+            }
             else
             {
                 var setting = new JsonSerializerSettings
@@ -34,7 +38,7 @@ namespace CloudMusicDotNet.Api.Infrastructure
                 };
                 json = JObject.FromObject(dto, JsonSerializer.Create(setting));
             }
-                
+
             var csrfToken = _httpContext.Request.Cookies["_csrf"];
 
             if (!string.IsNullOrWhiteSpace(csrfToken))
