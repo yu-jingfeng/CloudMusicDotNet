@@ -230,5 +230,21 @@
   "PlaylistUpdate": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/batch"
+  },
+  "Search": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/search/get"
+  },
+  "SearchHot": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/search/hot"
+  },
+  "SearchMultimatch": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/search/suggest/multimatch"
+  },
+  "SearchSuggest": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/search/suggest/"
   }
 }
