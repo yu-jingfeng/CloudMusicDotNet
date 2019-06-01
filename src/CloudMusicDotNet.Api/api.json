@@ -246,5 +246,25 @@
   "SearchSuggest": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/search/suggest/"
+  },
+  "SimiArtist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/discovery/simiArtist"
+  },
+  "SimiMv": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/discovery/simiMV"
+  },
+  "SimiPlaylist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/discovery/simiPlaylist"
+  },
+  "SimiSong": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/discovery/simiSong"
+  },
+  "SimiUser": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/discovery/simiUser"
   }
 }
