@@ -28,9 +28,9 @@ namespace CloudMusicDotNet.Commons
 
         public string GetLinuxapiCrypto(string data)
         {
-            var bytes = CryptoUtil.AesEncrypt(data, linuxapiKey, "", CipherMode.ECB);
+            var bytes = CryptoUtil.AesEncrypt(data, linuxapiKey, null, CipherMode.ECB);
 
-            string eparams = BitConverter.ToString(bytes).ToUpper();
+            string eparams = BitConverter.ToString(bytes).ToUpper().Replace("-", "");
 
             return $"eparams={eparams}";
         }

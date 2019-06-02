@@ -25,13 +25,14 @@ namespace CloudMusicDotNet.Commons
         public static byte[] AesEncrypt(string plainData, string key, string iv, CipherMode cipherMode)
         {
             byte[] toEncryptArray = Encoding.UTF8.GetBytes(plainData);
-            var rm = new RijndaelManaged
-            {
-                IV = Encoding.UTF8.GetBytes(iv),
-                Key = Encoding.UTF8.GetBytes(key),
-                Mode = cipherMode,
-                Padding = PaddingMode.PKCS7
-            };
+            var rm = new RijndaelManaged();
+            rm.Key = Encoding.UTF8.GetBytes(key);
+            rm.Mode = cipherMode;
+            rm.Padding = PaddingMode.PKCS7;
+
+            if (!string.IsNullOrEmpty(iv))
+                rm.IV = Encoding.UTF8.GetBytes(iv);
+
             ICryptoTransform cTransform = rm.CreateEncryptor();
             byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
             return resultArray;

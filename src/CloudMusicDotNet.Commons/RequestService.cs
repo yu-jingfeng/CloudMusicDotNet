@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CloudMusicDotNet.Commons
@@ -31,7 +32,13 @@ namespace CloudMusicDotNet.Commons
             if (apiInfo.Crypto == "weapi")
                 body = _cryptoService.GetWeapiCrypto(data);
             else
+            {
+                string url = Regex.Replace(apiInfo.Url, @"\w*api", "api");
+                data = "{\"method\":\"POST\",\"url\":\"" + url + "\",\"params\":" + data + "}";
                 body = _cryptoService.GetLinuxapiCrypto(data);
+                apiInfo.Url = "https://music.163.com/api/linux/forward";
+            }
+                
 
             var content = new StringContent(body, Encoding.UTF8, "application/x-www-form-urlencoded");
 
