@@ -51,7 +51,7 @@ namespace CloudMusicDotNet.Api.Controllers
         }
 
         /// <summary>
-        /// 所有榜单内容摘要
+        /// 所有榜单介绍
         /// </summary>
         /// <returns></returns>
         [HttpGet("")]

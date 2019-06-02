@@ -174,7 +174,7 @@ namespace CloudMusicDotNet.Api.Controllers
         /// </summary>
         /// <param name="index">类型索引</param>
         /// <returns></returns>
-        [HttpGet("Top/{id}")]
+        [HttpGet("Top/{index}")]
         public async Task<IActionResult> Top(int index)
         {
             var topList = new[]

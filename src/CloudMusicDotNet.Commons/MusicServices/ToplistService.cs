@@ -35,6 +35,11 @@ namespace CloudMusicDotNet.Commons.MusicServices
             return _requestService.Request("ToplistDetail", data);
         }
 
+        /// <summary>
+        /// 所有榜单介绍
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
         public Task<string> All(string data)
         {
             return _requestService.Request("Toplist", data);
