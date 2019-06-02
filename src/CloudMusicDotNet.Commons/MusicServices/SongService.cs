@@ -75,5 +75,14 @@ namespace CloudMusicDotNet.Commons.MusicServices
             return _requestService.Request("SongLikeList", data);
         }
 
+        /// <summary>
+        /// 新歌速递
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Task<string> New(string data)
+        {
+            return _requestService.Request("SongLikeList", data);
+        }
     }
 }

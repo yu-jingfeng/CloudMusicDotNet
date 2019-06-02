@@ -90,5 +90,15 @@ namespace CloudMusicDotNet.Commons.MusicServices
         {
             return _requestService.Request("ArtistSong", data, id);
         }
+
+        /// <summary>
+        /// 热门歌手
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Task<string> Top(string data)
+        {
+            return _requestService.Request("ArtistTop", data);
+        }
     }
 }

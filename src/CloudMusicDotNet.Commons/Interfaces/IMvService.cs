@@ -45,5 +45,12 @@ namespace CloudMusicDotNet.Commons.Interfaces
         /// <param name="data"></param>
         /// <returns></returns>
         Task<string> Url(string data);
+
+        /// <summary>
+        /// MV排行榜
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        Task<string> TopList(string data);
     }
 }

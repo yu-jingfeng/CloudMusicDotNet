@@ -68,5 +68,15 @@ namespace CloudMusicDotNet.Commons.MusicServices
         {
             return _requestService.Request("MvUrl", data);
         }
+
+        /// <summary>
+        /// MV排行榜
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Task<string> TopList(string data)
+        {
+            return _requestService.Request("MvTopList", data);
+        }
     }
 }

@@ -35,6 +35,10 @@
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/artist/"
   },
+  "ArtistTop": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/artist/top"
+  },
   "MusicComment": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/v1/resource/comments/R_SO_4_"
@@ -171,6 +175,10 @@
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/song/enhance/play/mv/url"
   },
+  "MvTopList": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/mv/toplist"
+  },
   "EventDel": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/eapi/event/delete"
@@ -231,6 +239,18 @@
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/batch"
   },
+  "PlaylistTop": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v3/playlist/detail"
+  },
+  "Playlist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/playlist/list"
+  },
+  "HighQuality": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/playlist/highquality/list"
+  },
   "Search": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/search/get"
@@ -286,5 +306,21 @@
   "SongLikeList": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/song/like/get"
+  },
+  "SongNew": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/discovery/new/songs"
+  },
+  "ToplistArtist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/toplist/artist"
+  },
+  "ToplistDetail": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/toplist/detail"
+  },
+  "Toplist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/toplist"
   }
 }

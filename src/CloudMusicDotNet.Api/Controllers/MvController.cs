@@ -93,11 +93,25 @@ namespace CloudMusicDotNet.Api.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("Url")]
-        public async Task<IActionResult> Url(string id)
+        public async Task<IActionResult> Link(string id)
         {
             var param = new { id, r = 1080 };
             var data = _dtoParseService.Parse(param);
             var result = await _mvService.Url(data);
+
+            return Content(result, "application/json");
+        }
+
+        /// <summary>
+        /// MV排行榜
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpGet("Top")]
+        public async Task<IActionResult> TopList([FromQuery]SimpleDto dto)
+        {
+            var data = _dtoParseService.Parse(dto);
+            var result = await _mvService.TopList(data);
 
             return Content(result, "application/json");
         }

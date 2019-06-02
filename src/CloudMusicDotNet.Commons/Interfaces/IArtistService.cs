@@ -61,5 +61,12 @@ namespace CloudMusicDotNet.Commons.Interfaces
         /// <param name="id">歌手id</param>
         /// <returns></returns>
         Task<string> Song(string data, string id);
+
+        /// <summary>
+        /// 热门歌手
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        Task<string> Top(string data);
     }
 }

@@ -44,5 +44,12 @@ namespace CloudMusicDotNet.Commons.Interfaces
         /// <param name="data"></param>
         /// <returns></returns>
         Task<string> LikeList(string data);
+
+        /// <summary>
+        /// 新歌速递
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        Task<string> New(string data);
     }
 }

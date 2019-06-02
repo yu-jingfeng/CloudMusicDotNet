@@ -125,5 +125,19 @@ namespace CloudMusicDotNet.Api.Controllers
 
             return Content(result, "application/json");
         }
+
+        /// <summary>
+        /// 热门歌手
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpGet("Top")]
+        public async Task<IActionResult> Top([FromQuery]SimpleDto dto)
+        {
+            var data = _dtoParseService.Parse(dto);
+            var result = await _artistService.Top(data);
+
+            return Content(result, "application/json");
+        }
     }
 }

@@ -95,5 +95,35 @@ namespace CloudMusicDotNet.Commons.MusicServices
         {
             return _requestService.Request("PlaylistUpdate", data);
         }
+
+        /// <summary>
+        /// 排行榜
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Task<string> Top(string data)
+        {
+            return _requestService.Request("PlaylistTop", data);
+        }
+
+        /// <summary>
+        /// 精品歌单
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Task<string> HighQuality(string data)
+        {
+            return _requestService.Request("HighQuality", data);
+        }
+
+        /// <summary>
+        /// 歌单列表
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public Task<string> List(string data)
+        {
+            return _requestService.Request("Playlist", data);
+        }
     }
 }

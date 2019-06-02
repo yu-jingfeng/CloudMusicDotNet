@@ -102,5 +102,20 @@ namespace CloudMusicDotNet.Api.Controllers
             return Content(result, "application/json");
         }
 
+        /// <summary>
+        /// 新歌速递
+        /// </summary>
+        /// <param name="areaId">地区 全部:0 华语:7 欧美:96 日本:8 韩国:16</param>
+        /// <returns></returns>
+        [HttpGet("New")]
+        public async Task<IActionResult> New(string areaId)
+        {
+            var param = new { areaId, total = true };
+            var data = _dtoParseService.Parse(param);
+            var result = await _songService.New(data);
+
+            return Content(result, "application/json");
+        }
+
     }
 }
