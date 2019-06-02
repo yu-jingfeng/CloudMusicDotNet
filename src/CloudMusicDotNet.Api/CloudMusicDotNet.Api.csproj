@@ -17,4 +17,6 @@
     <ProjectReference Include="..\CloudMusicDotNet.Commons\CloudMusicDotNet.Commons.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
 </Project>
