@@ -338,5 +338,53 @@
   "VideoUrl": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/cloudvideo/playurl"
+  },
+  "UserDetail": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/user/detail/"
+  },
+  "UserDj": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/dj/program/"
+  },
+  "UserEvent": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/event/get/"
+  },
+  "UserFolloweds": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/user/getfolloweds"
+  },
+  "UserFollows": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/user/getfollows/"
+  },
+  "UserPlaylist": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/user/playlist"
+  },
+  "UserRecord": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/play/record"
+  },
+  "UserSubCount": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/subcount"
+  },
+  "UserUpdate": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/user/profile/update"
+  },
+  "Cloud": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/cloud/get"
+  },
+  "CloudDetail": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/cloud/get/byids"
+  },
+  "CloudDelete": {
+    "Crypto": "weapi",
+    "Url": "http://music.163.com/weapi/cloud/del"
   }
 }
