@@ -386,5 +386,37 @@
   "CloudDelete": {
     "Crypto": "weapi",
     "Url": "http://music.163.com/weapi/cloud/del"
+  },
+  "Login": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/login"
+  },
+  "PhoneLogin": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/login/cellphone"
+  },
+  "Register": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/register/cellphone"
+  },
+  "SentCaptcha": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/sms/captcha/sent"
+  },
+  "VerifyCaptcha": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/sms/captcha/verify"
+  },
+  "Status": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com"
+  },
+  "Refresh": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/login/token/refresh"
+  },
+  "Logout": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/logout"
   }
 }
