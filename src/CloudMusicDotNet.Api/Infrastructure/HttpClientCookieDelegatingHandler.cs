@@ -28,8 +28,15 @@ namespace CloudMusicDotNet.Api.Infrastructure
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
             // 设置请求cookie
-            var reqCookies = _httpContext.Request.Headers["Cookie"];
-            request.Headers.Add("Cookie", values: reqCookies);
+            var reqCookies = _httpContext.Request.Headers["Cookie"].ToString();
+            if (string.IsNullOrEmpty(reqCookies))
+                reqCookies = "os=pc";
+            else
+                reqCookies += ";os=pc";
+            
+            var cookies = new List<string> { "os=pc" };
+
+            request.Headers.Add("Cookie", reqCookies);
             request.Headers.Add("Referer", "https://music.163.com");
 
             // 发送请求

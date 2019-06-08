@@ -30,7 +30,7 @@ namespace CloudMusicDotNet.Commons.MusicServices
         {
             var json = new JObject
             {
-                { "email", email },
+                { "username", email },
                 { "password", EncryptWithMD5(password) },
                 { "rememberLogin", "true" }
             };
