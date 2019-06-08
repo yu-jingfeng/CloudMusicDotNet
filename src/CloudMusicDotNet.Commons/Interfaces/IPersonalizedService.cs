@@ -44,5 +44,14 @@ namespace CloudMusicDotNet.Commons.Interfaces
         /// <param name="data"></param>
         /// <returns></returns>
         Task<string> PlayList(string data);
+
+        /// <summary>
+        /// 推荐节目
+        /// </summary>
+        /// <param name="cateId">类别id</param>
+        /// <param name="limit">数据条数</param>
+        /// <param name="offset">偏移量</param>
+        /// <returns></returns>
+        Task<string> Program(string cateId, int limit, int offset);
     }
 }

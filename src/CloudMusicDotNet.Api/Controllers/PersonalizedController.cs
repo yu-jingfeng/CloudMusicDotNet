@@ -100,5 +100,20 @@ namespace CloudMusicDotNet.Api.Controllers
 
             return Content(result, "application/json");
         }
+
+        /// <summary>
+        /// 推荐节目
+        /// </summary>
+        /// <param name="cateId">类别id</param>
+        /// <param name="limit">数据条数</param>
+        /// <param name="offset">偏移量</param>
+        /// <returns></returns>
+        [HttpGet("Program")]
+        public async Task<IActionResult> Program(string cateId, int limit = 10, int offset = 0)
+        {
+            var result = await _personalizedService.Program(cateId, limit, offset);
+
+            return Content(result, "application/json");
+        }
     }
 }

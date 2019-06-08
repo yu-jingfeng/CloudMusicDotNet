@@ -32,8 +32,7 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("Detail")]
         public async Task<IActionResult> Detail(string uid)
         {
-            var data = _dtoParseService.Parse(null);
-            var result = await _userService.Detail(data, uid);
+            var result = await _userService.Detail(uid);
 
             return Content(result, "application/json");
         }
@@ -48,9 +47,7 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("Dj")]
         public async Task<IActionResult> Dj(string uid, int limit = 30, int offset = 0)
         {
-            var param = new { limit, offset };
-            var data = _dtoParseService.Parse(param);
-            var result = await _userService.Dj(data, uid);
+            var result = await _userService.Dj(uid, limit, offset);
 
             return Content(result, "application/json");
         }
@@ -65,9 +62,7 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("Event")]
         public async Task<IActionResult> Event(string uid, int limit = 30, long time = -1)
         {
-            var param = new { limit, time, getcounts = true, total = false };
-            var data = _dtoParseService.Parse(param);
-            var result = await _userService.Event(data, uid);
+            var result = await _userService.Event(uid, limit, time);
 
             return Content(result, "application/json");
         }
@@ -79,12 +74,10 @@ namespace CloudMusicDotNet.Api.Controllers
         /// <param name="limit">数据条数</param>
         /// <param name="offset">偏移量</param>
         /// <returns></returns>
-        [HttpGet("Followeds")]
-        public async Task<IActionResult> Followeds(string uid, int limit = 30, int offset = 0)
+        [HttpGet("Followers")]
+        public async Task<IActionResult> Followers(string uid, int limit = 30, int offset = 0)
         {
-            var param = new { userId = uid, limit, offset };
-            var data = _dtoParseService.Parse(param);
-            var result = await _userService.Followeds(data);
+            var result = await _userService.Followers(uid, limit, offset);
 
             return Content(result, "application/json");
         }
@@ -96,12 +89,24 @@ namespace CloudMusicDotNet.Api.Controllers
         /// <param name="limit">数据条数</param>
         /// <param name="offset">偏移量</param>
         /// <returns></returns>
-        [HttpGet("Follows")]
-        public async Task<IActionResult> Follows(string uid, int limit = 30, int offset = 0)
+        [HttpGet("Followeds")]
+        public async Task<IActionResult> Followeds(string uid, int limit = 30, int offset = 0)
         {
-            var param = new { limit, offset, order = true };
-            var data = _dtoParseService.Parse(param);
-            var result = await _userService.Detail(data, uid);
+            var result = await _userService.Followeds(uid, limit, offset);
+
+            return Content(result, "application/json");
+        }
+
+        /// <summary>
+        /// 关注/取消关注用户
+        /// </summary>
+        /// <param name="uid">用户 id</param>
+        /// <param name="t">1为关注,其他为取消关注</param>
+        /// <returns></returns>
+        [HttpGet("Follow")]
+        public async Task<IActionResult> Follow(string uid, int t)
+        {
+            var result = await _userService.Follow(uid, t);
 
             return Content(result, "application/json");
         }
@@ -116,9 +121,7 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("Playlist")]
         public async Task<IActionResult> Playlist(string uid, int limit = 30, int offset = 0)
         {
-            var param = new { uid, limit, offset };
-            var data = _dtoParseService.Parse(param);
-            var result = await _userService.Playlist(data);
+            var result = await _userService.Playlist(uid, limit, offset);
 
             return Content(result, "application/json");
         }
@@ -132,9 +135,7 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("Record")]
         public async Task<IActionResult> Record(string uid, int type = 1)
         {
-            var param = new { uid, type };
-            var data = _dtoParseService.Parse(param);
-            var result = await _userService.Record(data, uid);
+            var result = await _userService.Record(uid, type);
 
             return Content(result, "application/json");
         }
@@ -146,8 +147,7 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("SubCount")]
         public async Task<IActionResult> SubCount()
         {
-            var data = _dtoParseService.Parse(null);
-            var result = await _userService.SubCount(data);
+            var result = await _userService.SubCount();
 
             return Content(result, "application/json");
         }
@@ -160,8 +160,8 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpPost("Update")]
         public async Task<IActionResult> Update(UserInfoDto userInfo)
         {
-            var data = _dtoParseService.Parse(userInfo);
-            var result = await _userService.Update(data);
+            var result = await _userService.Update(userInfo.Nickname, userInfo.Gender, userInfo.Birthday, userInfo.Province, 
+                                                   userInfo.City, userInfo.Signature, userInfo.AvatarImgId);
 
             return Content(result, "application/json");
         }

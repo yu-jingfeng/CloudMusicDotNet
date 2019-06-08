@@ -205,11 +205,15 @@
   },
   "PersonalizedPlayList": {
     "Crypto": "weapi",
-    "Url": "https://music.163.com/weapi/playlist/catalogue"
+    "Url": "https://music.163.com/weapi/personalized/playlist"
+  },
+  "PersonalizedProgram": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/program/recommend/v1"
   },
   "PlaylistCategories": {
     "Crypto": "weapi",
-    "Url": "https://music.163.com/weapi/personalized/playlist"
+    "Url": "https://music.163.com/weapi/playlist/catalogue"
   },
   "PlaylistCreate": {
     "Crypto": "weapi",
@@ -351,13 +355,17 @@
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/event/get/"
   },
-  "UserFolloweds": {
+  "UserFollowers": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/user/getfolloweds"
   },
   "UserFollows": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/user/getfollows/"
+  },
+  "UserFollow": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/user/"
   },
   "UserPlaylist": {
     "Crypto": "weapi",
@@ -415,8 +423,12 @@
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/login/token/refresh"
   },
-  "Logout": {
+  "RecommendSongs": {
     "Crypto": "weapi",
-    "Url": "https://music.163.com/weapi/logout"
+    "Url": "https://music.163.com/weapi/v1/discovery/recommend/songs"
+  },
+  "RecommendResource": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/weapi/v1/discovery/recommend/resource"
   }
 }
