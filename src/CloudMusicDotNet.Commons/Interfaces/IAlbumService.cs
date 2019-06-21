@@ -10,9 +10,18 @@ namespace CloudMusicDotNet.Commons.Interfaces
         /// <summary>
         /// 全部新碟（最新专辑）
         /// </summary>
-        /// <param name="data">JSON格式的参数</param>
+        /// <param name="area">区域 ALL,ZH,EA,KR,JP</param>
+        /// <param name="limit">数据条数</param>
+        /// <param name="offset">偏移量</param>
+        /// <param name="total">是否获取总条数</param>
         /// <returns></returns>
-        Task<string> NewAlubm(string data);
+        Task<string> New(string area, int limit, int offset, bool total);
+
+        /// <summary>
+        /// 热门新碟（新碟上架）
+        /// </summary>
+        /// <returns></returns>
+        Task<string> Hot();
 
         /// <summary>
         /// 已收藏专辑列表

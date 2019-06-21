@@ -32,8 +32,19 @@ namespace CloudMusicDotNet.Api.Controllers
         [HttpGet("New")]
         public async Task<IActionResult> New([FromQuery]NewAlbumDto newAlbumDto)
         {
-            var data = _dtoParseService.Parse(newAlbumDto);
-            var result = await _albumService.NewAlubm(data);
+            var result = await _albumService.New(newAlbumDto.Area, newAlbumDto.Limit, newAlbumDto.Offset, newAlbumDto.Total);
+
+            return Content(result, "application/json");
+        }
+
+        /// <summary>
+        /// 热门新碟（新碟上架）
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("Hot")]
+        public async Task<IActionResult> Hot()
+        {
+            var result = await _albumService.Hot();
 
             return Content(result, "application/json");
         }

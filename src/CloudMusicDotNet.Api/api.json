@@ -3,6 +3,10 @@
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/album/new"
   },
+  "AlubmHot": {
+    "Crypto": "weapi",
+    "Url": "https://music.163.com/api/discovery/newAlbum"
+  },
   "SubAlubm": {
     "Crypto": "weapi",
     "Url": "https://music.163.com/weapi/album/sublist"
